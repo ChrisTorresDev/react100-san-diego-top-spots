@@ -5,7 +5,6 @@ import TopSpot from './topspot';
 class App extends Component {
   constructor(props) {
     super(props);
-
     this.state = {
       topspots: []
     }
@@ -25,8 +24,7 @@ class App extends Component {
         <h2 className='display-4'>San Diego Top Spots</h2>
         <p className='lead'>A list of the top 30 places to see in San Diego, California.</p>
         </div>
-        {
-          this.state.topspots.map(topspot => (
+        {this.state.topspots.map(topspot => (
             <TopSpot
               key={topspot.id}
               name={topspot.name}
